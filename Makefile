@@ -73,6 +73,7 @@ all:		$(NAME)
 $(NAME):	$(OBJ)
 		make -C lib/my/
 		$(CC) -o $(NAME) $(OBJ) $(LDFLAGS) $(GRAPHICAL)
+		@echo -e "\x1b[41mCompilation Success\e[0m"
 
 debug:		CFLAGS+=$(DEBUG)
 debug:		$(OBJ)
