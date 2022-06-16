@@ -11,7 +11,7 @@ SRC_DIR	 	= src_file
 
 ERR_DIR		= $(SRC_DIR)/error_handling
 
-NAME		=	jam_jam
+NAME		=	tick_avoider
 
 GRAPHICAL	= -l csfml-graphics -l csfml-audio -l csfml-system -l csfml-window
 

@@ -16,11 +16,9 @@ void create_tuto_text(display_struct_t *s)
     s->tuto_name.font);
     sfText_setCharacterSize(s->tuto_name.text, 55);
     sfText_setString(s->tuto_name.text,
-    "To play, move yourself accross the map , throw a \n\nstink ball by "
-    "clicking on window\n\n"
-    "if u touch a member of your family , "
-    "he's gonna appear\n\n becareful"
-    "you have 35 stink ball to use!\n\nENJOY");
+    "Target?\nHelp Clinton to regain his path!\n\n"
+    "How to do it?\nUse arrow keys in order to move Clinton!\n\n"
+    "Dificulty?\nAvoid tick during his crossing\n!ENJOY\n");
     sfText_setColor(s->tuto_name.text, sfColor_fromRGB(100, 100, 255));
     sfText_setPosition(s->tuto_name.text, (sfVector2f) {50, 100});
 }

@@ -64,9 +64,9 @@ void create_text_name(display_struct_t *sprite_struct)
     sprite_struct->game_name.font);
     sfText_setCharacterSize(sprite_struct->game_name.text, 100);
     sfText_setString(sprite_struct->game_name.text,
-    "Jam-Jam\nHide Hide\nCache cache");
+    "tick avoider");
     sfText_setColor(sprite_struct->game_name.text, sfColor_fromRGB(100, 100, 255));
-    sfText_setPosition(sprite_struct->game_name.text, (sfVector2f) {700, 10});
+    sfText_setPosition(sprite_struct->game_name.text, (sfVector2f) {550, 10});
 }
 
 void create_sprite_struct_start_exit(display_struct_t *s)
