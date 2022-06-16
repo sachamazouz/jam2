@@ -52,8 +52,8 @@ void stink_ball(basic_struct_t *window, display_struct_t *sprite_struct, enemy_p
          window->attack.time = sfClock_getElapsedTime(window->attack.clock);
         if ((window->attack.time.microseconds) < 10)
             return;
-        claque_sound(window, sprite_struct);
-        check_family(sprite_struct,array,mouse);
+        //claque_sound(window, sprite_struct);
+        //check_family(sprite_struct,array,mouse);
         //faire l'animation bruit.
     }
 }
@@ -66,9 +66,9 @@ void draw_sprite(basic_struct_t *basic, display_struct_t *sprite_struct, enemy_p
     sfSprite_setTextureRect(sprite_struct->a.s_main.s,
     sprite_struct->a.s_main.rect);
     stink_ball(basic,sprite_struct, array);
-    draw_score(basic,sprite_struct, array);
+    //draw_score(basic,sprite_struct, array);
     //detect_enemy_fight(basic, sprite_struct);
-    if (sprite_struct->detect_fight1 == 10) {
+    /*if (sprite_struct->detect_fight1 == 10) {
         sfRenderWindow_drawSprite(basic->window, sprite_struct->s_enemy1.s, NULL);
         sfRenderWindow_drawSprite(basic->window, sprite_struct->s_enemy_face1.s, NULL);
     }
@@ -83,7 +83,7 @@ void draw_sprite(basic_struct_t *basic, display_struct_t *sprite_struct, enemy_p
     if (sprite_struct->detect_fight1 == 10) {
         sfRenderWindow_drawSprite(basic->window, sprite_struct->s_enemy4.s, NULL);
         sfRenderWindow_drawSprite(basic->window, sprite_struct->s_enemy_face4.s, NULL);
-    }
+    }*/
 
     if (sfKeyboard_isKeyPressed(sfKeyZ))
         basic->nb_switcher = 3;

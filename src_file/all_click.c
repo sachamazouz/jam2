@@ -30,7 +30,6 @@ void exit_nb_switcher1(basic_struct_t *basic, display_struct_t *sprite_s)
 
 void start_nb_switcher1(basic_struct_t *basic, display_struct_t *sprite_s)
 {
-    
     if ((basic->event.type == sfEvtMouseButtonPressed) &&
         (basic->posi_mouse.x > sprite_s->s_start.posi.x &&
          basic->posi_mouse.x < sprite_s->s_start.posi.x + 605 &&
@@ -93,4 +92,4 @@ void echap(basic_struct_t *window)
         sfRenderWindow_close(window->window);
     if (sfKeyboard_isKeyPressed(sfKeyEscape) && window->nb_switcher == 3)
         window->nb_switcher = 8;
-} 
+}
