@@ -45,10 +45,6 @@ void draw_ennemy(basic_struct_t *basic, display_struct_t *sprite_struct)
 void stink_ball(basic_struct_t *window, display_struct_t *sprite_struct, enemy_pos_t *array)
 {
     sfVector2i mouse = sfMouse_getPositionRenderWindow(window->window);
-    sfFloatRect carrx = sfSprite_getGlobalBounds(sprite_struct->s_start.s);
-    sfVector2f scale;
-    sfVector2f scales;
-
     //printf("%d\n" ,mouse.x);
     //printf("%d\n" ,mouse.y);
     if (window->event.type == sfEvtMouseButtonPressed) {
@@ -57,7 +53,7 @@ void stink_ball(basic_struct_t *window, display_struct_t *sprite_struct, enemy_p
         if ((window->attack.time.microseconds) < 10)
             return;
         claque_sound(window, sprite_struct);
-        check_family(window,sprite_struct,array,mouse);
+        check_family(sprite_struct,array,mouse);
         //faire l'animation bruit.
     }
 }

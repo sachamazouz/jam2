@@ -8,7 +8,7 @@
 #include "my.h"
 #include "rpg.h"
 
-void check_family(basic_struct_t *window, display_struct_t *sprite_struct, enemy_pos_t *array, sfVector2i mouse)
+void check_family(display_struct_t *sprite_struct, enemy_pos_t *array, sfVector2i mouse)
 {
     int tour_de_boucle = 0;
     int cursor = 0;

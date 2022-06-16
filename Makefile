@@ -71,7 +71,9 @@ SRC	=	$(SRC_DIR)/all_click.c					\
 all:		$(NAME)
 
 $(NAME):	$(OBJ)
+		@echo -e "\x1b[43m.c->.o successfully done!\e[0m"
 		make -C lib/my/
+		@echo -e "\x1b[42mLib Compilation Success\e[0m"
 		$(CC) -o $(NAME) $(OBJ) $(LDFLAGS) $(GRAPHICAL)
 		@echo -e "\x1b[41mCompilation Success\e[0m"
 
@@ -80,12 +82,14 @@ debug:		$(OBJ)
 		$(CC) -o $(NAME) $(OBJ) $(LDFLAGS)
 
 clean:
+		@echo -e "\x1b[44mClean command Success!\e[0m"
 		$(RM) $(OBJ)
 
 fclean:		clean
 		make fclean -C lib/my
 		$(RM) $(NAME)
 		$(RM) lib/$(LIBNAME)
+		@echo -e "\x1b[45mFclean rules done!\e[0m"
 
 re:		fclean all
 

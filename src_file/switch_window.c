@@ -33,7 +33,7 @@ void mainer_supply(basic_struct_t *window, display_struct_t *sprite_struct, enem
     if (window->nb_switcher == 7)
         display_tuto(window, sprite_struct);
     if (window->nb_switcher == 6) {
-        change_life(window, sprite_struct, array);
+        change_life(window, sprite_struct);
         fight(window, sprite_struct);
     }
     if (window->nb_switcher == 1)
