@@ -55,6 +55,13 @@ void spritepos(display_struct_t *s)
     sfSprite_setPosition(s->s_enemy3.s, s->s_enemy3.posi);
     sfSprite_setPosition(s->s_enemy4.s, s->s_enemy4.posi);
     sfSprite_setPosition(s->s_enemy5.s, s->s_enemy5.posi);
+
+    sfSprite_setPosition(s->a.s_tick1.s, s->a.s_tick1.posi);
+    sfSprite_setPosition(s->a.s_tick2.s, s->a.s_tick2.posi);
+    sfSprite_setPosition(s->a.s_tick3.s, s->a.s_tick3.posi);
+    sfSprite_setPosition(s->a.s_tick4.s, s->a.s_tick4.posi);
+    sfSprite_setPosition(s->a.s_tick5.s, s->a.s_tick5.posi);
+
     sfSprite_setPosition(s->s_enemy_face1.s, s->s_enemy_face1.posi);
     sfSprite_setPosition(s->s_enemy_face2.s, s->s_enemy_face2.posi);
     sfSprite_setPosition(s->s_enemy_face3.s, s->s_enemy_face3.posi);
@@ -64,6 +71,14 @@ void spritepos(display_struct_t *s)
 
 void spriteposx(display_struct_t *s)
 {
+
+
+    sfSprite_setPosition(s->a.s_tick1.s, s->a.s_tick1.posi);
+    sfSprite_setPosition(s->a.s_tick2.s, s->a.s_tick2.posi);
+    sfSprite_setPosition(s->a.s_tick3.s, s->a.s_tick3.posi);
+    sfSprite_setPosition(s->a.s_tick4.s, s->a.s_tick4.posi);
+    sfSprite_setPosition(s->a.s_tick5.s, s->a.s_tick5.posi);
+
     sfSprite_setPosition(s->s_walpa.s, s->s_walpa.posi);
     sfSprite_setPosition(s->s_enemy1.s, s->s_enemy1.posi);
     sfSprite_setPosition(s->s_enemy2.s, s->s_enemy2.posi);
