@@ -61,24 +61,24 @@ void display_pause(basic_struct_t *window, display_struct_t *sprite_struct)
     get_click_pause(window, sprite_struct);
 }
 
+//3200/2300 en bas à droite
+//900/600 en haut à gauche
+
 void complete_struct_ennemy(enemy_pos_t *array)
 {
     int value = 0;
     int cursor = 0;
-    int a = 1700;
-    int c = 900;
+    int c = 2300;
 
-    int b = 1200;
-    int d = 500;
+    int d = 1700;
     enemy_pos_t *posi = malloc(sizeof(posi));
 
     array->enemy_array = malloc(sizeof(int *) * (TICK_AMOUNT * 2 + 1));
     srand(time(0));
     while (value != TICK_AMOUNT) {
-        array->enemy_array[cursor] = ((rand() % c) + 400);
+        array->enemy_array[cursor] = ((rand() % c) + 900);
         cursor++;
-        array->enemy_array[cursor] = ((rand() % d) + 300);
-        b = 1920;
+        array->enemy_array[cursor] = ((rand() % d) + 600);
         cursor++;
         value++;
     }

@@ -16,6 +16,13 @@ void m_up_map(display_struct_t *s)
     s->a.s_tick3.posi.y += 5;
     s->a.s_tick4.posi.y += 5;
     s->a.s_tick5.posi.y += 5;
+    s->a.s_porte_sortie.posi.y += 5;
+    s->a.s_tick6.posi.y += 5;
+    s->a.s_tick7.posi.y += 5;
+    s->a.s_tick8.posi.y += 5;
+    s->a.s_tick9.posi.y += 5;
+    s->a.s_tick10.posi.y += 5;
+
     s->s_enemy_face1.posi.y += 5;
     s->s_enemy_face2.posi.y += 5;
     s->s_enemy_face3.posi.y += 5;
@@ -33,7 +40,7 @@ void m_up(display_struct_t *sprite_struct)
 {
     if (sfKeyboard_isKeyPressed(sfKeyUp)) {
         if (sprite_struct->s_walpa.posi.y < 430) {
-        m_up_map(sprite_struct);
+            m_up_map(sprite_struct);
         }
         if (sprite_struct->seconds > 0.10) {
             sprite_struct->a.s_main.rect.top = 118;
@@ -52,6 +59,13 @@ void m_down_map(display_struct_t *s)
     s->a.s_tick3.posi.y -= 5;
     s->a.s_tick4.posi.y -= 5;
     s->a.s_tick5.posi.y -= 5;
+    s->a.s_porte_sortie.posi.y -= 5;
+    s->a.s_tick6.posi.y -= 5;
+    s->a.s_tick7.posi.y -= 5;
+    s->a.s_tick8.posi.y -= 5;
+    s->a.s_tick9.posi.y -= 5;
+    s->a.s_tick10.posi.y -= 5;
+
     s->s_walpa.posi.y -= 5;
     s->s_enemy_face1.posi.y -= 5;
     s->s_enemy_face2.posi.y -= 5;

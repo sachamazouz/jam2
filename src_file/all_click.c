@@ -11,7 +11,7 @@ void manageoptions(basic_struct_t *basic, display_struct_t *sprite_struct)
 {
     sfVector2i mouse = sfMouse_getPositionRenderWindow(basic->window);
     sfFloatRect carrx = sfSprite_getGlobalBounds(sprite_struct->s_option.s);
-
+    
     if  (sfFloatRect_contains(&carrx, mouse.x, mouse.y) &&
          basic->event.type == sfEvtMouseButtonPressed) {
         basic->nb_switcher = 2;

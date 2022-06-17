@@ -15,6 +15,13 @@ void m_left_map(display_struct_t *s)
     s->a.s_tick3.posi.x += 5;
     s->a.s_tick4.posi.x += 5;
     s->a.s_tick5.posi.x += 5;
+    s->a.s_porte_sortie.posi.x += 5;
+    s->a.s_tick6.posi.x += 5;
+    s->a.s_tick7.posi.x += 5;
+    s->a.s_tick8.posi.x += 5;
+    s->a.s_tick9.posi.x += 5;
+    s->a.s_tick10.posi.x += 5;
+
     s->s_walpa.posi.x += 5;
     s->s_enemy_face1.posi.x += 5;
     s->s_enemy_face2.posi.x += 5;
@@ -52,6 +59,13 @@ void m_right_map(display_struct_t *s)
     s->a.s_tick3.posi.x -= 5;
     s->a.s_tick4.posi.x -= 5;
     s->a.s_tick5.posi.x -= 5;
+    s->a.s_porte_sortie.posi.x -= 5;
+    s->a.s_tick6.posi.x -= 5;
+    s->a.s_tick7.posi.x -= 5;
+    s->a.s_tick8.posi.x -= 5;
+    s->a.s_tick9.posi.x -= 5;
+    s->a.s_tick10.posi.x -= 5;
+
     s->s_walpa.posi.x -= 5;
     s->s_enemy_face1.posi.x -= 5;
     s->s_enemy_face2.posi.x -= 5;

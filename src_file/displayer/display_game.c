@@ -70,6 +70,14 @@ void draw_sprite(basic_struct_t *basic, display_struct_t *sprite_struct, enemy_p
     sfRenderWindow_drawSprite(basic->window, sprite_struct->a.s_tick3.s, NULL);
     sfRenderWindow_drawSprite(basic->window, sprite_struct->a.s_tick4.s, NULL);
     sfRenderWindow_drawSprite(basic->window, sprite_struct->a.s_tick5.s, NULL);
+    sfRenderWindow_drawSprite(basic->window, sprite_struct->a.s_tick6.s, NULL);
+    sfRenderWindow_drawSprite(basic->window, sprite_struct->a.s_tick7.s, NULL);
+    sfRenderWindow_drawSprite(basic->window, sprite_struct->a.s_tick8.s, NULL);
+    sfRenderWindow_drawSprite(basic->window, sprite_struct->a.s_tick9.s, NULL);
+    sfRenderWindow_drawSprite(basic->window, sprite_struct->a.s_tick10.s, NULL);
+
+    sfRenderWindow_drawSprite(basic->window, sprite_struct->a.s_porte_sortie.s, NULL);
+
 
     draw_ennemy(basic, sprite_struct);
     sfSprite_setTextureRect(sprite_struct->a.s_main.s,

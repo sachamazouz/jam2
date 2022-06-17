@@ -21,6 +21,9 @@ void enemyinit(display_struct_t *sprite_struct)
     enemyinit5(sprite_struct);
 }
 
+//3200/2300 en bas à droite
+//900/600 en haut à gauche
+
 void create_parasit(display_struct_t *sprite_struct, enemy_pos_t *posi)
 {
     sprite_struct->a.s_tick2.posi = (sfVector2f) {posi->enemy_array[0], posi->enemy_array[1]};
@@ -73,6 +76,66 @@ void create_parasit(display_struct_t *sprite_struct, enemy_pos_t *posi)
     sprite_struct->a.t_tick5.t, sfTrue);
     sfSprite_setPosition(sprite_struct->a.s_tick5.s,
     sprite_struct->a.s_tick5.posi);
+
+    sprite_struct->a.s_tick6.posi = (sfVector2f) {posi->enemy_array[10], posi->enemy_array[11]};
+    sprite_struct->a.t_tick6.t =
+    sfTexture_createFromFile("Ressources/tique_fam-removebg-preview.png", NULL);
+    sprite_struct->a.s_tick6.rect = (sfIntRect) {0, 0, 110, 140};
+    sprite_struct->a.s_tick6.s = sfSprite_create();
+    sfSprite_setTexture(sprite_struct->a.s_tick6.s,
+    sprite_struct->a.t_tick6.t, sfTrue);
+    sfSprite_setPosition(sprite_struct->a.s_tick6.s,
+    sprite_struct->a.s_tick6.posi);
+
+    sprite_struct->a.s_tick7.posi = (sfVector2f) {posi->enemy_array[12], posi->enemy_array[13]};
+    sprite_struct->a.t_tick7.t =
+    sfTexture_createFromFile("Ressources/tique_fam-removebg-preview.png", NULL);
+    sprite_struct->a.s_tick7.rect = (sfIntRect) {0, 0, 110, 140};
+    sprite_struct->a.s_tick7.s = sfSprite_create();
+    sfSprite_setTexture(sprite_struct->a.s_tick7.s,
+    sprite_struct->a.t_tick7.t, sfTrue);
+    sfSprite_setPosition(sprite_struct->a.s_tick7.s,
+    sprite_struct->a.s_tick7.posi);
+
+    sprite_struct->a.s_tick8.posi = (sfVector2f) {posi->enemy_array[14], posi->enemy_array[15]};
+    sprite_struct->a.t_tick8.t =
+    sfTexture_createFromFile("Ressources/tique_fam-removebg-preview.png", NULL);
+    sprite_struct->a.s_tick8.rect = (sfIntRect) {0, 0, 110, 140};
+    sprite_struct->a.s_tick8.s = sfSprite_create();
+    sfSprite_setTexture(sprite_struct->a.s_tick8.s,
+    sprite_struct->a.t_tick8.t, sfTrue);
+    sfSprite_setPosition(sprite_struct->a.s_tick8.s,
+    sprite_struct->a.s_tick8.posi);
+
+    sprite_struct->a.s_tick9.posi = (sfVector2f) {posi->enemy_array[16], posi->enemy_array[17]};
+    sprite_struct->a.t_tick9.t =
+    sfTexture_createFromFile("Ressources/tique_fam-removebg-preview.png", NULL);
+    sprite_struct->a.s_tick9.rect = (sfIntRect) {0, 0, 110, 140};
+    sprite_struct->a.s_tick9.s = sfSprite_create();
+    sfSprite_setTexture(sprite_struct->a.s_tick9.s,
+    sprite_struct->a.t_tick9.t, sfTrue);
+    sfSprite_setPosition(sprite_struct->a.s_tick9.s,
+    sprite_struct->a.s_tick9.posi);
+
+    sprite_struct->a.s_tick10.posi = (sfVector2f) {posi->enemy_array[18], posi->enemy_array[19]};
+    sprite_struct->a.t_tick10.t =
+    sfTexture_createFromFile("Ressources/tique_fam-removebg-preview.png", NULL);
+    sprite_struct->a.s_tick10.rect = (sfIntRect) {0, 0, 110, 140};
+    sprite_struct->a.s_tick10.s = sfSprite_create();
+    sfSprite_setTexture(sprite_struct->a.s_tick10.s,
+    sprite_struct->a.t_tick10.t, sfTrue);
+    sfSprite_setPosition(sprite_struct->a.s_tick10.s,
+    sprite_struct->a.s_tick10.posi);
+
+    sprite_struct->a.s_porte_sortie.posi = (sfVector2f) {3100, 1550};
+    sprite_struct->a.t_porte_sortie.t =
+    sfTexture_createFromFile("Ressources/left.jpg", NULL);
+    sprite_struct->a.s_porte_sortie.rect = (sfIntRect) {0, 0, 110, 140};
+    sprite_struct->a.s_porte_sortie.s = sfSprite_create();
+    sfSprite_setTexture(sprite_struct->a.s_porte_sortie.s,
+    sprite_struct->a.t_porte_sortie.t, sfTrue);
+    sfSprite_setPosition(sprite_struct->a.s_porte_sortie.s,
+    sprite_struct->a.s_porte_sortie.posi);
 }
 
 int create_perso(display_struct_t *sprite_struct, enemy_pos_t *posi)

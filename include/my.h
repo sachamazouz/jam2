@@ -13,7 +13,7 @@
     #include <SFML/System.h>
     #include <stdlib.h>
     #include <stdio.h>
-    #define TICK_AMOUNT      (5)
+    #define TICK_AMOUNT      (10)
 
 typedef struct get_sound {
     sfSoundBuffer *buffer;
@@ -66,8 +66,8 @@ typedef struct i_attack {
 } inventory_attack;
 
 typedef struct get_animate_sprite {
-    def_sprite s_tick2;
-    def_texture t_tick2;
+    def_sprite s_porte_sortie;
+    def_texture t_porte_sortie;
     def_sprite s_hunter;
     def_texture t_hunter;
     def_sprite s_cloud;
@@ -76,13 +76,25 @@ typedef struct get_animate_sprite {
     def_texture t_main;
     def_sprite s_tick1;
     def_texture t_tick1;
+    def_sprite s_tick2;
+    def_texture t_tick2;
     def_sprite s_tick3;
     def_texture t_tick3;
     def_sprite s_tick4;
     def_texture t_tick4;
     def_sprite s_tick5;
     def_texture t_tick5;
-}animate_sprite;
+    def_sprite s_tick6;
+    def_texture t_tick6;
+    def_sprite s_tick7;
+    def_texture t_tick7;
+    def_sprite s_tick8;
+    def_texture t_tick8;
+    def_sprite s_tick9;
+    def_texture t_tick9;
+    def_sprite s_tick10;
+    def_texture t_tick10;
+} animate_sprite;
 
 typedef struct displayer {
     def_text tuto_name;
