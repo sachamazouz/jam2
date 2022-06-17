@@ -65,16 +65,19 @@ void complete_struct_ennemy(enemy_pos_t *array)
 {
     int value = 0;
     int cursor = 0;
-    int a = 1080;
-    int b = 1920;
+    int a = 1700;
+    int c = 900;
+
+    int b = 1200;
+    int d = 500;
     enemy_pos_t *posi = malloc(sizeof(posi));
 
-    array->enemy_array = malloc(sizeof(int *) * (FAMILY_AMOUNT * 2 + 1));
+    array->enemy_array = malloc(sizeof(int *) * (TICK_AMOUNT * 2 + 1));
     srand(time(0));
-    while (value != FAMILY_AMOUNT) {
-        array->enemy_array[cursor] = rand() % b;
+    while (value != TICK_AMOUNT) {
+        array->enemy_array[cursor] = ((rand() % c) + 400);
         cursor++;
-        array->enemy_array[cursor] = rand() % a;
+        array->enemy_array[cursor] = ((rand() % d) + 300);
         b = 1920;
         cursor++;
         value++;
@@ -96,8 +99,11 @@ void complete_struct_ennemy(enemy_pos_t *array)
     my_putchar('\n');
     my_putnbr(array->enemy_array[7]);
     my_putchar('\n');
-    my_putnbr(array->stink_ball);
+    my_putnbr(array->enemy_array[8]);
     my_putchar('\n');
+    my_putnbr(array->enemy_array[9]);
+    my_putchar('\n');
+
     return;
 }
 
@@ -112,7 +118,7 @@ int main(void)
     create_loose(&sprite_struct);
     create_win(&sprite_struct);
     create_sound(&sprite_struct);
-    create_perso(&sprite_struct);
+    create_perso(&sprite_struct, &posi);
     create_menu(&sprite_struct);
     enemyinit(&sprite_struct);
     create_sprite_struct_start_exit(&sprite_struct);

@@ -11,6 +11,11 @@
 void m_up_map(display_struct_t *s)
 {
     s->s_walpa.posi.y += 5;
+    s->a.s_tick1.posi.y += 5;
+    s->a.s_tick2.posi.y += 5;
+    s->a.s_tick3.posi.y += 5;
+    s->a.s_tick4.posi.y += 5;
+    s->a.s_tick5.posi.y += 5;
     s->s_enemy_face1.posi.y += 5;
     s->s_enemy_face2.posi.y += 5;
     s->s_enemy_face3.posi.y += 5;
@@ -42,6 +47,11 @@ void m_up(display_struct_t *sprite_struct)
 
 void m_down_map(display_struct_t *s)
 {
+    s->a.s_tick1.posi.y -= 5;
+    s->a.s_tick2.posi.y -= 5;
+    s->a.s_tick3.posi.y -= 5;
+    s->a.s_tick4.posi.y -= 5;
+    s->a.s_tick5.posi.y -= 5;
     s->s_walpa.posi.y -= 5;
     s->s_enemy_face1.posi.y -= 5;
     s->s_enemy_face2.posi.y -= 5;

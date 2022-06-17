@@ -13,7 +13,7 @@ void create_background_game(display_struct_t *sprite_struct, char *way_map)
 
     sprite_struct->t_walpa.t = sfTexture_createFromFile(way_map, NULL);
     sprite_struct->s_walpa.s = sfSprite_create();
-    sprite_struct->s_walpa.posi = (sfVector2f) {900, 500};
+    sprite_struct->s_walpa.posi = (sfVector2f) {900, 500}; //800 et 630
     sfSprite_setTexture(sprite_struct->s_walpa.s,
                         sprite_struct->t_walpa.t, sfTrue);
     sfSprite_setPosition(sprite_struct->s_walpa.s,

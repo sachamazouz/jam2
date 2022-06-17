@@ -92,26 +92,19 @@ void enemyinit3(display_struct_t *sprite_struct)
 void enemyinit4(display_struct_t *sprite_struct)
 {
     sprite_struct->s_enemy4.s = sfSprite_create();
-    sprite_struct->t_enemy4.t =
-        sfTexture_createFromFile("Ressources/enemy.png", NULL);
+    sprite_struct->t_enemy4.t = sfTexture_createFromFile("Ressources/enemy.png", NULL);
     sprite_struct->s_enemy_face4.s = sfSprite_create();
-    sprite_struct->t_enemy_face4.t =
-        sfTexture_createFromFile("Ressources/najib.png", NULL);
+    sprite_struct->t_enemy_face4.t = sfTexture_createFromFile("Ressources/najib.png", NULL);
     sprite_struct->s_enemy_face4.posi = (sfVector2f) {-353, 1793};
     sprite_struct->s_enemy4.rect = (sfIntRect) {0, 0, 180, 290};
     sprite_struct->s_enemy4.posi = (sfVector2f) {-400, 1800};
     sfVector2f x = {0.7 ,0.5};
     sfVector2f y = {0.33 ,0.33};
-    sfSprite_setTexture(sprite_struct->s_enemy4.s,
-                        sprite_struct->t_enemy4.t, sfFalse);
-    sfSprite_setTexture(sprite_struct->s_enemy_face4.s,
-                        sprite_struct->t_enemy_face4.t, sfFalse);
-    sfSprite_setTextureRect(sprite_struct->s_enemy4.s,
-                            sprite_struct->s_enemy4.rect);
-    sfSprite_setPosition(sprite_struct->s_enemy_face4.s,
-                         sprite_struct->s_enemy_face4.posi);
-    sfSprite_setPosition(sprite_struct->s_enemy4.s,
-                         sprite_struct->s_enemy4.posi);
+    sfSprite_setTexture(sprite_struct->s_enemy4.s, sprite_struct->t_enemy4.t, sfFalse);
+    sfSprite_setTexture(sprite_struct->s_enemy_face4.s, sprite_struct->t_enemy_face4.t, sfFalse);
+    sfSprite_setTextureRect(sprite_struct->s_enemy4.s, sprite_struct->s_enemy4.rect);
+    sfSprite_setPosition(sprite_struct->s_enemy_face4.s,sprite_struct->s_enemy_face4.posi);
+    sfSprite_setPosition(sprite_struct->s_enemy4.s, sprite_struct->s_enemy4.posi);
     sfSprite_setScale(sprite_struct->s_enemy4.s, x);
     sfSprite_setScale(sprite_struct->s_enemy_face4.s, y);
 }

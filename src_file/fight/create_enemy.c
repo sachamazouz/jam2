@@ -10,8 +10,7 @@
 void create_enemy1(basic_struct_t *window)
 {
     window->e.s_enemy1.posi = (sfVector2f) {725, 555};
-    window->e.t_enemy1.t =
-        sfTexture_createFromFile("Ressources/attack/segfault.png", NULL);
+    window->e.t_enemy1.t = sfTexture_createFromFile("Ressources/attack/segfault.png", NULL);
     window->e.s_enemy1.rect = (sfIntRect) {0, 0, 235, 14};
     window->e.s_enemy1.s = sfSprite_create();
     sfSprite_setTexture(window->e.s_enemy1.s, window->e.t_enemy1.t, sfTrue);

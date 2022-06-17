@@ -82,8 +82,8 @@ debug:		$(OBJ)
 		$(CC) -o $(NAME) $(OBJ) $(LDFLAGS)
 
 clean:
-		@echo -e "\x1b[44mClean command Success!\e[0m"
 		$(RM) $(OBJ)
+		@echo -e "\x1b[44mClean command Success!\e[0m"
 
 fclean:		clean
 		make fclean -C lib/my

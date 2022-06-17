@@ -23,7 +23,7 @@ void manageoptions(basic_struct_t *basic, display_struct_t *sprite_struct);
 
 void init_inventory_end(basic_struct_t *window, display_struct_t *sprite_struct);
 void enemyinit(display_struct_t *sprite_struct);
-int create_perso(display_struct_t *sprite_struct);
+int create_perso(display_struct_t *sprite_struct, enemy_pos_t *posi);
 void create_sound(display_struct_t *sound);
 void create_score(display_struct_t *sprite_struct);
 
