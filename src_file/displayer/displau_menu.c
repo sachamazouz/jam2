@@ -23,7 +23,6 @@ void display_menu(basic_struct_t *basic, display_struct_t *sprite_struct)
 {
     sfRenderWindow_drawSprite(basic->window, sprite_struct->s_esc.s, NULL);
     sfRenderWindow_drawSprite(basic->window, sprite_struct->s_mon.s, NULL);
-    sfRenderWindow_drawSprite(basic->window, sprite_struct->s_mof.s, NULL);
     sfRenderWindow_drawSprite(basic->window, sprite_struct->s_homeb.s, NULL);
     sfRenderWindow_drawSprite(basic->window, sprite_struct->s_30.s, NULL);
     sfRenderWindow_drawSprite(basic->window, sprite_struct->s_60.s, NULL);

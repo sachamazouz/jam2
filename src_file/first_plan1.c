@@ -18,7 +18,8 @@ void create_tuto_text(display_struct_t *s)
     sfText_setString(s->tuto_name.text,
     "Target?\nHelp Clinton to regain his path!\n\n"
     "How to do it?\nUse arrow keys in order to move Clinton!\n\n"
-    "Dificulty?\nAvoid tick during his crossing\n!ENJOY\n");
+    "Dificulty?\nAvoid tick during his crossing!\n"
+    "Secret tips: To find the path, look for the pebble road :-)\nENJOY\n");
     sfText_setColor(s->tuto_name.text, sfColor_fromRGB(100, 100, 255));
     sfText_setPosition(s->tuto_name.text, (sfVector2f) {50, 100});
 }

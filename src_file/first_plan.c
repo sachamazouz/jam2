@@ -25,6 +25,8 @@ void mangascalex(display_struct_t *s, basic_struct_t window)
     sfVector2f scale;
     sfVector2f scales;
 
+    printf("x is %f\n" ,s->s_walpa.posi.x);
+    printf("y is %f\n" ,s->s_walpa.posi.y);
     scale.x = 1.5;
     scale.y = 1.5;
     scales.x = 1;
@@ -35,6 +37,9 @@ void mangascalex(display_struct_t *s, basic_struct_t window)
     else
         sfSprite_setScale(s->s_exit.s ,scales);
 }
+
+//hauteur -610 - -755
+//largeut -1320
 
 void mangascale(display_struct_t *s, basic_struct_t window)
 {

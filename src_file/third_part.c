@@ -36,9 +36,6 @@ void create_parasit(display_struct_t *sprite_struct, enemy_pos_t *posi)
     sfSprite_setPosition(sprite_struct->a.s_tick2.s,
     sprite_struct->a.s_tick2.posi);
 
-
-
-
     sprite_struct->a.s_tick1.posi = (sfVector2f) {posi->enemy_array[2], posi->enemy_array[3]};
     sprite_struct->a.s_tick1.rect = (sfIntRect) {0, 0, 110, 140};
     sprite_struct->a.t_tick1.t = sfTexture_createFromFile("Ressources/tique_fam-removebg-preview.png", NULL);

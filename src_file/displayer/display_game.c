@@ -83,6 +83,15 @@ void draw_sprite(basic_struct_t *basic, display_struct_t *sprite_struct, enemy_p
     sfSprite_setTextureRect(sprite_struct->a.s_main.s,
     sprite_struct->a.s_main.rect);
     stink_ball(basic,sprite_struct, array);
+    //hauteur -610 - -755
+    //largeut -1320
+    float hauteur_min = -755.0;
+    float hauteur_max = -610.0;
+    float largeur_min = -1320.0;
+
+    if ((sprite_struct->s_walpa.posi.y > (hauteur_min) && sprite_struct->s_walpa.posi.y < (hauteur_max)) && sprite_struct->s_walpa.posi.x < largeur_min)
+       basic->nb_switcher = 4;
+
     //draw_score(basic,sprite_struct, array);
     //detect_enemy_fight(basic, sprite_struct);
     /*if (sprite_struct->detect_fight1 == 10) {
@@ -135,4 +144,5 @@ void display_game(basic_struct_t *basic, display_struct_t *sprite_struct, enemy_
     m_move(sprite_struct);
     draw_sprite(basic, sprite_struct, array);
     echap(basic);
+    check_family(sprite_struct,array);
 }

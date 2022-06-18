@@ -28,6 +28,7 @@ void init_inventory_end(basic_struct_t *window, display_struct_t *sprite_struct)
 
 void draw_end(basic_struct_t *window)
 {
+    return;
     if (window->click_key_1 != 1)
         sfRenderWindow_drawSprite(window->window, window->i.skey1.s, NULL);
     if (window->click_key_2 != 1)
