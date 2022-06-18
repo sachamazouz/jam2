@@ -62,9 +62,6 @@ void draw_sprite(basic_struct_t *basic, display_struct_t *sprite_struct, enemy_p
 {
     sfRenderWindow_drawSprite(basic->window, sprite_struct->s_walpa.s, NULL);
     sfRenderWindow_drawSprite(basic->window, sprite_struct->a.s_main.s, NULL);
-
-    sfRenderWindow_drawSprite(basic->window, sprite_struct->s_enemy1.s, NULL);
-
     sfRenderWindow_drawSprite(basic->window, sprite_struct->a.s_tick1.s, NULL);
     sfRenderWindow_drawSprite(basic->window, sprite_struct->a.s_tick2.s, NULL);
     sfRenderWindow_drawSprite(basic->window, sprite_struct->a.s_tick3.s, NULL);
