@@ -63,7 +63,7 @@ void draw_sprite(basic_struct_t *basic, display_struct_t *sprite_struct, enemy_p
     sfRenderWindow_drawSprite(basic->window, sprite_struct->s_walpa.s, NULL);
     sfRenderWindow_drawSprite(basic->window, sprite_struct->a.s_main.s, NULL);
     sfRenderWindow_drawSprite(basic->window, sprite_struct->a.s_tick1.s, NULL);
-    /*sfRenderWindow_drawSprite(basic->window, sprite_struct->a.s_tick2.s, NULL);
+    sfRenderWindow_drawSprite(basic->window, sprite_struct->a.s_tick2.s, NULL);
     sfRenderWindow_drawSprite(basic->window, sprite_struct->a.s_tick3.s, NULL);
     sfRenderWindow_drawSprite(basic->window, sprite_struct->a.s_tick4.s, NULL);
     sfRenderWindow_drawSprite(basic->window, sprite_struct->a.s_tick5.s, NULL);
@@ -71,7 +71,7 @@ void draw_sprite(basic_struct_t *basic, display_struct_t *sprite_struct, enemy_p
     sfRenderWindow_drawSprite(basic->window, sprite_struct->a.s_tick7.s, NULL);
     sfRenderWindow_drawSprite(basic->window, sprite_struct->a.s_tick8.s, NULL);
     sfRenderWindow_drawSprite(basic->window, sprite_struct->a.s_tick9.s, NULL);
-    sfRenderWindow_drawSprite(basic->window, sprite_struct->a.s_tick10.s, NULL);*/
+    sfRenderWindow_drawSprite(basic->window, sprite_struct->a.s_tick10.s, NULL);
 
     sfRenderWindow_drawSprite(basic->window, sprite_struct->a.s_porte_sortie.s, NULL);
 
@@ -79,7 +79,8 @@ void draw_sprite(basic_struct_t *basic, display_struct_t *sprite_struct, enemy_p
     draw_ennemy(basic, sprite_struct);
     sfSprite_setTextureRect(sprite_struct->a.s_main.s,
     sprite_struct->a.s_main.rect);
-    check_family(sprite_struct,array);
+    if (check_family(sprite_struct,array) != 0)
+        basic->nb_switcher = 5;
     stink_ball(basic,sprite_struct, array);
     //hauteur -610 - -755
     //largeut -1320

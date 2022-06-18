@@ -201,7 +201,7 @@ void draw_score(basic_struct_t *basic, display_struct_t *sprite_struct, enemy_po
 void claque_sound(basic_struct_t *window, display_struct_t *d);
 void mainer_supply(basic_struct_t *window, display_struct_t *sprite_struct, enemy_pos_t *array);
 void nb_switcher_one(basic_struct_t window, display_struct_t s, enemy_pos_t array);
-void check_family(display_struct_t *sprite_struct, enemy_pos_t *array);
+int check_family(display_struct_t *sprite_struct, enemy_pos_t *array);
 void change_life(basic_struct_t *window, display_struct_t *sprite_struct);
 void create_tuto_text(display_struct_t *s);
 void display_game(basic_struct_t *basic, display_struct_t *sprite_struct, enemy_pos_t *array);

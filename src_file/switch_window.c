@@ -15,7 +15,6 @@ void mainer_supply2(basic_struct_t *window, display_struct_t *sprite_struct, ene
     if (window->nb_switcher == 4)
         display_win(window, sprite_struct);
     if (window->nb_switcher == 3)
-        //display_win(window, sprite_struct);
         display_game(window, sprite_struct, array);
     if (window->nb_switcher == 2)
         display_menu(window, sprite_struct);
