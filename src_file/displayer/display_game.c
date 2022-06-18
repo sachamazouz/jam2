@@ -138,10 +138,70 @@ void draw_score(basic_struct_t *basic, display_struct_t *sprite_struct, enemy_po
     sfRenderWindow_drawSprite(basic->window, basic->i.sboule_puante.s, NULL);
 }
 
+void display_how_to_play1(basic_struct_t *basic, display_struct_t *sprite_struct, enemy_pos_t *array)
+{
+
+}
+
+void display_how_to_play2(basic_struct_t *basic, display_struct_t *sprite_struct, enemy_pos_t *array)
+{
+
+}
+
+void display_how_to_play3(basic_struct_t *basic, display_struct_t *sprite_struct, enemy_pos_t *array)
+{
+
+}
+
+void launch_intro(basic_struct_t *basic, display_struct_t *sprite_struct, enemy_pos_t *array)
+{
+    if (sfKeyboard_isKeyPressed(sfKeyA)) {
+        array->introduction = 10;
+        return;
+    }
+    if (array->introduction == 0) {
+        display_how_to_play1(basic, sprite_struct, array);
+        if(sfKeyboard_isKeyPressed(sfKeyRight)) {
+            array->introduction++;
+            return;
+        }
+    }
+     if (array->introduction == 1) {
+        display_how_to_play2(basic, sprite_struct, array);
+        if(sfKeyboard_isKeyPressed(sfKeyRight)) {
+            array->introduction++;
+            return;
+        }
+        if(sfKeyboard_isKeyPressed(sfKeyLeft)) {
+            array->introduction++;
+            return;
+        }
+    }
+    if (array->introduction == 2) {
+        display_how_to_play3(basic, sprite_struct, array);
+        if(sfKeyboard_isKeyPressed(sfKeyRight)) {
+            array->introduction = 10;
+            return;
+        }
+        if(sfKeyboard_isKeyPressed(sfKeyLeft)) {
+            array->introduction++;
+            return;
+        }
+    }
+    return;
+}
+
 void display_game(basic_struct_t *basic, display_struct_t *sprite_struct, enemy_pos_t *array)
 {
-    m_move(sprite_struct);
     draw_sprite(basic, sprite_struct, array);
-    echap(basic);
-    check_family(sprite_struct,array);
+    if (array->introduction < 5) {
+        launch_intro(basic, sprite_struct, array);
+        return;
+    }
+    if (array->introduction == 10) {
+        m_move(sprite_struct);
+        draw_sprite(basic, sprite_struct, array);
+        echap(basic);
+        check_family(sprite_struct,array);
+    }
 }

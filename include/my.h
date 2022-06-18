@@ -323,6 +323,7 @@ typedef struct bstruct {
 typedef struct ennemy_pos {
     int *enemy_array;
     int stink_ball;
+    int introduction;
 } enemy_pos_t;
 
 #endif /* MY_H_ */

@@ -82,7 +82,8 @@ void complete_struct_ennemy(enemy_pos_t *array)
         cursor++;
         value++;
     }
-    array->stink_ball = 35;
+    array->introduction = 0;
+    array->stink_ball = 0;
     my_putnbr(array->enemy_array[0]);
     my_putchar('\n');
     my_putnbr(array->enemy_array[1]);
