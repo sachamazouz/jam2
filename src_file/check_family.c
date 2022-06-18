@@ -18,9 +18,14 @@ void check_family(display_struct_t *sprite_struct, enemy_pos_t *array)
     int bas_droity = sprite_struct->s_walpa.posi.y + 50;
 
 
-    printf("La souris est de coordonnée: \nx = %d\n y = %d\nhaut gauche est de coordonnée: "
-    "\nx = %d\n y = %d\nbas droit est de coordonnée: \nx = %d\n y = %d\n\n",0,0,haut_gauchex,haut_gauchey,bas_droitx,bas_droity);
+    printf("tick 1 est de coordonnée: "
+    "\nx = %f\n y = %f\n",sprite_struct->a.s_tick1.posi.x,sprite_struct->a.s_tick1.posi.y);
 
+    if ((sprite_struct->a.s_tick1.posi.x) > sprite_struct->a.s_main.posi.x &&
+    (sprite_struct->a.s_tick1.posi.x + 200) < sprite_struct->a.s_main.posi.x &&
+    (sprite_struct->a.s_tick1.posi.y) > sprite_struct->a.s_main.posi.y &&
+    (sprite_struct->a.s_tick1.posi.y + 130) > sprite_struct->a.s_main.posi.y)
+    bas_droity++;
 
     return;
 }

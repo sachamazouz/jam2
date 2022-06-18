@@ -50,4 +50,16 @@ void sfSprite_setPositionx(display_struct_t *s)
     sfSprite_setPosition(s->s_enemy_face3.s, s->s_enemy_face3.posi);
     sfSprite_setPosition(s->s_enemy_face4.s, s->s_enemy_face4.posi);
     sfSprite_setPosition(s->s_enemy_face5.s, s->s_enemy_face5.posi);
+    sfSprite_setPosition(s->a.s_tick1.s, s->a.s_tick1.posi);
+    sfSprite_setPosition(s->a.s_tick2.s, s->a.s_tick2.posi);
+    sfSprite_setPosition(s->a.s_tick3.s, s->a.s_tick3.posi);
+    sfSprite_setPosition(s->a.s_tick4.s, s->a.s_tick4.posi);
+    sfSprite_setPosition(s->a.s_tick5.s, s->a.s_tick5.posi);
+    sfSprite_setPosition(s->a.s_tick6.s, s->a.s_tick6.posi);
+    sfSprite_setPosition(s->a.s_tick7.s, s->a.s_tick7.posi);
+    sfSprite_setPosition(s->a.s_tick8.s, s->a.s_tick8.posi);
+    sfSprite_setPosition(s->a.s_tick9.s, s->a.s_tick9.posi);
+    sfSprite_setPosition(s->a.s_tick10.s, s->a.s_tick10.posi);
+    sfSprite_setPosition(s->a.s_tick10.s, s->a.s_porte_sortie.posi);
+
 }
