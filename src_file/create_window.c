@@ -60,6 +60,5 @@ void sfSprite_setPositionx(display_struct_t *s)
     sfSprite_setPosition(s->a.s_tick8.s, s->a.s_tick8.posi);
     sfSprite_setPosition(s->a.s_tick9.s, s->a.s_tick9.posi);
     sfSprite_setPosition(s->a.s_tick10.s, s->a.s_tick10.posi);
-    sfSprite_setPosition(s->a.s_tick10.s, s->a.s_porte_sortie.posi);
-
+    sfSprite_setPosition(s->a.s_porte_sortie.s, s->a.s_porte_sortie.posi);
 }
