@@ -21,15 +21,6 @@ void check_family(display_struct_t *sprite_struct, enemy_pos_t *array)
     printf("La souris est de coordonnée: \nx = %d\n y = %d\nhaut gauche est de coordonnée: "
     "\nx = %d\n y = %d\nbas droit est de coordonnée: \nx = %d\n y = %d\n\n",0,0,haut_gauchex,haut_gauchey,bas_droitx,bas_droity);
 
-    while (tour_de_boucle != TICK_AMOUNT) {
-        if (array->enemy_array[cursor] <= bas_droitx && array->enemy_array[cursor] >= haut_gauchex &&
-        array->enemy_array[cursor + 1] <= bas_droity && array->enemy_array[cursor + 1] >= haut_gauchey) {
-            printf("présent\n");
-        }
-        tour_de_boucle++;
-        cursor += 2;
-    }
-
 
     return;
 }

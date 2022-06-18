@@ -79,6 +79,7 @@ void draw_sprite(basic_struct_t *basic, display_struct_t *sprite_struct, enemy_p
     draw_ennemy(basic, sprite_struct);
     sfSprite_setTextureRect(sprite_struct->a.s_main.s,
     sprite_struct->a.s_main.rect);
+    check_family(sprite_struct,array);
     stink_ball(basic,sprite_struct, array);
     //hauteur -610 - -755
     //largeut -1320
