@@ -86,9 +86,29 @@ int click_easy(basic_struct_t *window, display_struct_t *sprite_struct)
     return 0;
 }
 
+void jam_validation(basic_struct_t *window, display_struct_t *sprite_struct)
+{
+    sfRenderWindow_drawSprite(window->window, sprite_struct->s_validation.s, NULL);
+    sfRenderWindow_drawText(window->window, sprite_struct->validation.text, NULL);
+    sfRenderWindow_drawText(window->window, sprite_struct->validation_yes.text, NULL);
+    sfRenderWindow_drawText(window->window, sprite_struct->validation_no.text, NULL);
+    echap2(window);
+}
+
 void echap(basic_struct_t *window)
 {
     if (sfKeyboard_isKeyPressed(sfKeyX))
+        sfRenderWindow_close(window->window);
+    if (sfKeyboard_isKeyPressed(sfKeyEscape) && window->nb_switcher == 3)
+        window->nb_switcher = 8;
+    if (sfKeyboard_isKeyPressed(sfKeyP))
+        window->nb_switcher = 9;
+}
+
+
+void echap2(basic_struct_t *window)
+{
+    if (sfKeyboard_isKeyPressed(sfKeyQ))
         sfRenderWindow_close(window->window);
     if (sfKeyboard_isKeyPressed(sfKeyEscape) && window->nb_switcher == 3)
         window->nb_switcher = 8;

@@ -122,6 +122,9 @@ typedef struct displayer {
     def_texture t_return;
     def_sprite s_return;
     def_sprite s_start;
+    def_texture t_start;
+    def_sprite s_validation;
+    def_texture t_validation;
     def_sprite s_enemy_face1;
     def_texture t_enemy_face1;
     def_sprite s_enemy_face2;
@@ -134,7 +137,6 @@ typedef struct displayer {
     def_texture t_enemy_face4;
     def_sprite s_enemy_face5;
     def_texture t_enemy_face5;
-    def_texture t_start;
     def_sprite s_inventory;
     def_texture t_inventory;
     def_sprite s_mof;
@@ -200,6 +202,9 @@ typedef struct displayer {
     def_text tquete;
     def_text game_name;
     def_text click_intro;
+    def_text validation;
+    def_text validation_yes;
+    def_text validation_no;
     def_sound sound;
     def_sound sound_a1;
     def_sound sound_a2;

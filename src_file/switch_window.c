@@ -28,6 +28,8 @@ void mainer_supply3(basic_struct_t *window, display_struct_t *sprite_struct)
 
 void mainer_supply(basic_struct_t *window, display_struct_t *sprite_struct, enemy_pos_t *array)
 {
+    if (window->nb_switcher == 9)
+        jam_validation(window, sprite_struct);
     if (window->nb_switcher == 8)
         display_pause(window, sprite_struct);
     if (window->nb_switcher == 7)

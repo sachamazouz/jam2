@@ -138,6 +138,45 @@ void create_sprite_struct_start_exit(display_struct_t *s)
     sfSprite_setTexture(s->s_esc.s, s->t_esc.t, sfTrue);
     create_tuto(s);
     create_hand(s);
+
+
+    sfVector2f x = {2.5 ,2.3};
+    s->t_validation.t = sfTexture_createFromFile("Ressources/validation.png", NULL);
+    s->s_validation.s = sfSprite_create();
+    s->s_validation.posi = (sfVector2f) {0, 0};
+    sfSprite_setTexture(s->s_validation.s, s->t_validation.t, sfTrue);
+    sfSprite_setPosition(s->s_validation.s,s->s_validation.posi);
+    sfSprite_setScale(s->s_validation.s, x);
+
+    s->validation.font = sfFont_createFromFile(
+    "Ressources/zorque.otf");
+    s->validation.text = sfText_create();
+    sfText_setFont(s->validation.text, s->validation.font);
+    sfText_setCharacterSize(s->validation.text, 80);
+    sfText_setString(s->validation.text,
+    "Does I deserve my jam credit catch up?\n");
+    sfText_setColor(s->validation.text, sfColor_fromRGB(100, 100, 255));
+    sfText_setPosition(s->validation.text, (sfVector2f) {100, 10});
+
+    s->validation_yes.font = sfFont_createFromFile(
+    "Ressources/zorque.otf");
+    s->validation_yes.text = sfText_create();
+    sfText_setFont(s->validation_yes.text, s->validation_yes.font);
+    sfText_setCharacterSize(s->validation_yes.text, 80);
+    sfText_setString(s->validation_yes.text,
+    "YES");
+    sfText_setColor(s->validation_yes.text, sfGreen);
+    sfText_setPosition(s->validation_yes.text, (sfVector2f) {600, 570});
+
+    s->validation_no.font = sfFont_createFromFile(
+    "Ressources/zorque.otf");
+    s->validation_no.text = sfText_create();
+    sfText_setFont(s->validation_no.text, s->validation_no.font);
+    sfText_setCharacterSize(s->validation_no.text, 80);
+    sfText_setString(s->validation_no.text,
+    "NO");
+    sfText_setColor(s->validation_no.text, sfRed);
+    sfText_setPosition(s->validation_no.text, (sfVector2f) {1300, 570});
 }
 
 void create_sprite_struct_tuto(display_struct_t *sprite_struct)
