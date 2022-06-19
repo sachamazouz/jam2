@@ -77,7 +77,6 @@ void create_text_name(display_struct_t *sprite_struct)
     sfText_setColor(sprite_struct->click_intro.text, sfColor_fromRGB(100, 100, 255));
     sfText_setPosition(sprite_struct->click_intro.text, (sfVector2f) {100, 800});
 
-    //Hi! I've been stuck in the middle of the desert for 4 days...
     sprite_struct->text1.font = sfFont_createFromFile("Ressources/zorque.otf");
     sprite_struct->text1.text = sfText_create();
     sfText_setFont(sprite_struct->text1.text,
@@ -107,8 +106,6 @@ void create_text_name(display_struct_t *sprite_struct)
     "please, help me to \nfind it or Ill probably dead in\n the worst conditions...");
     sfText_setColor(sprite_struct->text3.text, sfColor_fromRGB(100, 100, 255));
     sfText_setPosition(sprite_struct->text3.text, (sfVector2f) {1000, 180});
-
-
 
     sprite_struct->s_bulle.posi = (sfVector2f) {980, 55};
     sprite_struct->t_bulle.t = sfTexture_createFromFile("Ressources/bulle_intro.png", NULL);

@@ -90,26 +90,6 @@ void draw_sprite(basic_struct_t *basic, display_struct_t *sprite_struct, enemy_p
 
     if ((sprite_struct->s_walpa.posi.y > (hauteur_min) && sprite_struct->s_walpa.posi.y < (hauteur_max)) && sprite_struct->s_walpa.posi.x < largeur_min)
        basic->nb_switcher = 4;
-
-    //draw_score(basic,sprite_struct, array);
-    //detect_enemy_fight(basic, sprite_struct);
-    /*if (sprite_struct->detect_fight1 == 10) {
-        sfRenderWindow_drawSprite(basic->window, sprite_struct->s_enemy1.s, NULL);
-        sfRenderWindow_drawSprite(basic->window, sprite_struct->s_enemy_face1.s, NULL);
-    }
-    if (sprite_struct->detect_fight1 == 10) {
-        sfRenderWindow_drawSprite(basic->window, sprite_struct->s_enemy2.s, NULL);
-        sfRenderWindow_drawSprite(basic->window, sprite_struct->s_enemy_face2.s, NULL);
-    }
-    if (sprite_struct->detect_fight1 == 10) {
-        sfRenderWindow_drawSprite(basic->window, sprite_struct->s_enemy3.s, NULL);
-        sfRenderWindow_drawSprite(basic->window, sprite_struct->s_enemy_face3.s, NULL);
-    }
-    if (sprite_struct->detect_fight1 == 10) {
-        sfRenderWindow_drawSprite(basic->window, sprite_struct->s_enemy4.s, NULL);
-        sfRenderWindow_drawSprite(basic->window, sprite_struct->s_enemy_face4.s, NULL);
-    }*/
-
     if (sfKeyboard_isKeyPressed(sfKeyZ))
         basic->nb_switcher = 3;
     if (sfKeyboard_isKeyPressed(sfKeyQ)) {
@@ -155,7 +135,6 @@ void display_how_to_play3(basic_struct_t *basic, display_struct_t *sprite_struct
 
 void launch_intro(basic_struct_t *basic, display_struct_t *sprite_struct, enemy_pos_t *array)
 {
-    //afficher le texte pour cliquer sur A
     sfRenderWindow_drawSprite(basic->window, sprite_struct->s_bulle.s, NULL);
     sfRenderWindow_drawText(basic->window, sprite_struct->click_intro.text, NULL);
     sprite_struct->clock.time = sfClock_getElapsedTime(sprite_struct->clock.clock);
