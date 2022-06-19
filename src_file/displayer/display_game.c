@@ -155,36 +155,44 @@ void display_how_to_play3(basic_struct_t *basic, display_struct_t *sprite_struct
 
 void launch_intro(basic_struct_t *basic, display_struct_t *sprite_struct, enemy_pos_t *array)
 {
-    if (sfKeyboard_isKeyPressed(sfKeyA)) {
+    sprite_struct->clock.time = sfClock_getElapsedTime(sprite_struct->clock.clock);
+    sprite_struct->seconds = sprite_struct->clock.time.microseconds / 1000000.0;
+    if (sfKeyboard_isKeyPressed(sfKeyA) && (sprite_struct->seconds > 0.10)) {
+        sfClock_restart(sprite_struct->clock.clock);
         array->introduction = 10;
         return;
     }
     if (array->introduction == 0) {
         display_how_to_play1(basic, sprite_struct, array);
-        if(sfKeyboard_isKeyPressed(sfKeyRight)) {
+        if(sfKeyboard_isKeyPressed(sfKeyRight) && (sprite_struct->seconds > 0.10)) {
             array->introduction++;
+            sfClock_restart(sprite_struct->clock.clock);
             return;
         }
     }
      if (array->introduction == 1) {
         display_how_to_play2(basic, sprite_struct, array);
-        if(sfKeyboard_isKeyPressed(sfKeyRight)) {
+        if(sfKeyboard_isKeyPressed(sfKeyRight) && (sprite_struct->seconds > 0.10) ) {
             array->introduction++;
+            sfClock_restart(sprite_struct->clock.clock);
             return;
         }
-        if(sfKeyboard_isKeyPressed(sfKeyLeft)) {
+        if(sfKeyboard_isKeyPressed(sfKeyLeft) && (sprite_struct->seconds > 0.10)) {
             array->introduction++;
+            sfClock_restart(sprite_struct->clock.clock);
             return;
         }
     }
     if (array->introduction == 2) {
         display_how_to_play3(basic, sprite_struct, array);
-        if(sfKeyboard_isKeyPressed(sfKeyRight)) {
+        if(sfKeyboard_isKeyPressed(sfKeyRight) && (sprite_struct->seconds > 0.10)) {
             array->introduction = 10;
+            sfClock_restart(sprite_struct->clock.clock);
             return;
         }
-        if(sfKeyboard_isKeyPressed(sfKeyLeft)) {
+        if(sfKeyboard_isKeyPressed(sfKeyLeft) && (sprite_struct->seconds > 0.10)) {
             array->introduction++;
+            sfClock_restart(sprite_struct->clock.clock);
             return;
         }
     }
@@ -198,6 +206,7 @@ void display_game(basic_struct_t *basic, display_struct_t *sprite_struct, enemy_
         launch_intro(basic, sprite_struct, array);
         return;
     }
+
     if (array->introduction == 10) {
         m_move(sprite_struct);
         draw_sprite(basic, sprite_struct, array);
