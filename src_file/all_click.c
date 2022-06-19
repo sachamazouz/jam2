@@ -92,6 +92,16 @@ void jam_validation(basic_struct_t *window, display_struct_t *sprite_struct)
     sfRenderWindow_drawText(window->window, sprite_struct->validation.text, NULL);
     sfRenderWindow_drawText(window->window, sprite_struct->validation_yes.text, NULL);
     sfRenderWindow_drawText(window->window, sprite_struct->validation_no.text, NULL);
+
+    window->posi_mouse = sfMouse_getPositionRenderWindow(window->window);
+    if ((window->event.type == sfEvtMouseButtonPressed) &&
+    (window->posi_mouse.x > 600 && window->posi_mouse.x < 740
+    && window->posi_mouse.y > 590 && window->posi_mouse.y < 650))
+        sfRenderWindow_drawText(window->window, sprite_struct->validation_yesmerci.text, NULL);
+    if ((window->event.type == sfEvtMouseButtonPressed) &&
+    (window->posi_mouse.x > 1300 && window->posi_mouse.x < 1420
+    && window->posi_mouse.y > 590 && window->posi_mouse.y < 650))
+        sfRenderWindow_drawText(window->window, sprite_struct->validation_nor.text, NULL);
     echap2(window);
 }
 

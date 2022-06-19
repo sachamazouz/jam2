@@ -177,6 +177,31 @@ void create_sprite_struct_start_exit(display_struct_t *s)
     "NO");
     sfText_setColor(s->validation_no.text, sfRed);
     sfText_setPosition(s->validation_no.text, (sfVector2f) {1300, 570});
+
+
+    s->validation_yesmerci.font = sfFont_createFromFile(
+    "Ressources/zorque.otf");
+    s->validation_yesmerci.text = sfText_create();
+    sfText_setFont(s->validation_yesmerci.text, s->validation_yesmerci.font);
+    sfText_setCharacterSize(s->validation_yesmerci.text, 80);
+    sfText_setString(s->validation_yesmerci.text,
+    "MERCI BIEN LE SANG");
+    sfText_setColor(s->validation_yesmerci.text, sfGreen);
+    sfText_setPosition(s->validation_yesmerci.text, (sfVector2f) {600, 400});
+
+
+
+    s->validation_nor.font = sfFont_createFromFile(
+    "Ressources/zorque.otf");
+    s->validation_nor.text = sfText_create();
+    sfText_setFont(s->validation_nor.text, s->validation_nor.font);
+    sfText_setCharacterSize(s->validation_nor.text, 60);
+    sfText_setString(s->validation_nor.text,
+    "MAUVAISE REPONSE, S IL VOUS PLAIT REESSAYEZ\n\n          "
+    "    J'AI GALERE POUR CETTE CLOCK...");
+    sfText_setColor(s->validation_nor.text, sfRed);
+    sfText_setPosition(s->validation_nor.text, (sfVector2f) {300, 200});
+
 }
 
 void create_sprite_struct_tuto(display_struct_t *sprite_struct)

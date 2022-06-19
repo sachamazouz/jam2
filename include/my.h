@@ -205,6 +205,8 @@ typedef struct displayer {
     def_text validation;
     def_text validation_yes;
     def_text validation_no;
+    def_text validation_yesmerci;
+    def_text validation_nor;
     def_sound sound;
     def_sound sound_a1;
     def_sound sound_a2;

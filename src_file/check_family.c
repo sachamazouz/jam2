@@ -18,9 +18,6 @@ int check_family(display_struct_t *sprite_struct, enemy_pos_t *array)
     int x_main_max = 940;
     int y_main_max = 500;
 
-    printf("tick 1 est de coordonnée: "
-    "\nx = %f\n y = %f\n",sprite_struct->a.s_tick1.posi.x,sprite_struct->a.s_tick1.posi.y);
-
     if (sprite_struct->a.s_tick1.posi.x >= x_main && sprite_struct->a.s_tick1.posi.x <= x_main_max
     && sprite_struct->a.s_tick1.posi.y >= y_main && sprite_struct->a.s_tick1.posi.y <= y_main_max)
         return 1;
