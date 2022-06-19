@@ -232,6 +232,8 @@ typedef struct displayer {
     int creater;
     float seconds;
     float seconds2;
+    int debug;
+    int debug2;
 } display_struct_t;
 
 typedef struct inventory {

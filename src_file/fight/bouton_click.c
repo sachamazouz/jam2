@@ -28,7 +28,6 @@ void claque_sound(basic_struct_t *window, display_struct_t *d)
 
     if (window->first_check == 0) {
         window->first_check = 1;
-        printf("remove first click\n");
         return;
     }
     while (value == 0) {

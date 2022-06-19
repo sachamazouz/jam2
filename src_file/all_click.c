@@ -93,6 +93,10 @@ void jam_validation(basic_struct_t *window, display_struct_t *sprite_struct)
     sfRenderWindow_drawText(window->window, sprite_struct->validation_yes.text, NULL);
     sfRenderWindow_drawText(window->window, sprite_struct->validation_no.text, NULL);
 
+
+    sprite_struct->clock.time = sfClock_getElapsedTime(sprite_struct->clock.clock);
+    sprite_struct->seconds = sprite_struct->clock.time.microseconds / 1000000.0;
+
     window->posi_mouse = sfMouse_getPositionRenderWindow(window->window);
     if ((window->event.type == sfEvtMouseButtonPressed) &&
     (window->posi_mouse.x > 600 && window->posi_mouse.x < 740
@@ -101,7 +105,18 @@ void jam_validation(basic_struct_t *window, display_struct_t *sprite_struct)
     if ((window->event.type == sfEvtMouseButtonPressed) &&
     (window->posi_mouse.x > 1300 && window->posi_mouse.x < 1420
     && window->posi_mouse.y > 590 && window->posi_mouse.y < 650))
-        sfRenderWindow_drawText(window->window, sprite_struct->validation_nor.text, NULL);
+        sprite_struct->debug = 1;
+        if (sprite_struct->debug2 == 0) {
+            sfClock_restart(sprite_struct->clock.clock);
+            sprite_struct->debug2 = 1;
+        }
+        if (sprite_struct->debug == 1 && sprite_struct->seconds < 6)
+            sfRenderWindow_drawText(window->window, sprite_struct->validation_nor.text, NULL);
+        if (sprite_struct->debug == 1 && sprite_struct->seconds >= 6) {
+            sprite_struct->debug = 0;
+            sprite_struct->debug2 = 0;
+            sfClock_restart(sprite_struct->clock.clock);
+        }
     echap2(window);
 }
 

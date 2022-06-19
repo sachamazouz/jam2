@@ -202,6 +202,8 @@ void create_sprite_struct_start_exit(display_struct_t *s)
     sfText_setColor(s->validation_nor.text, sfRed);
     sfText_setPosition(s->validation_nor.text, (sfVector2f) {300, 200});
 
+    s->debug = 0;
+    s->debug2 = 0;
 }
 
 void create_sprite_struct_tuto(display_struct_t *sprite_struct)

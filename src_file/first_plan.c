@@ -25,8 +25,6 @@ void mangascalex(display_struct_t *s, basic_struct_t window)
     sfVector2f scale;
     sfVector2f scales;
 
-    printf("position de x est %d\n" ,mouse.x);
-    printf("position de y est %d\n" ,mouse.y);
     scale.x = 1.5;
     scale.y = 1.5;
     scales.x = 1;

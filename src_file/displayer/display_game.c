@@ -45,16 +45,11 @@ void draw_ennemy(basic_struct_t *basic, display_struct_t *sprite_struct)
 void stink_ball(basic_struct_t *window, display_struct_t *sprite_struct, enemy_pos_t *array)
 {
     sfVector2i mouse = sfMouse_getPositionRenderWindow(window->window);
-    //printf("%d\n" ,mouse.x);
-    //printf("%d\n" ,mouse.y);
     if (window->event.type == sfEvtMouseButtonPressed) {
         array->stink_ball = array->stink_ball - 1;
          window->attack.time = sfClock_getElapsedTime(window->attack.clock);
         if ((window->attack.time.microseconds) < 10)
             return;
-        //claque_sound(window, sprite_struct);
-        //check_family(sprite_struct,array,mouse);
-        //faire l'animation bruit.
     }
 }
 
