@@ -194,8 +194,12 @@ typedef struct displayer {
     def_sprite s_continue;
     def_texture t_continue;
     def_text text;
+    def_text text1;
+    def_text text2;
+    def_text text3;
     def_text tquete;
     def_text game_name;
+    def_text click_intro;
     def_sound sound;
     def_sound sound_a1;
     def_sound sound_a2;
@@ -208,6 +212,8 @@ typedef struct displayer {
     def_texture t_gap;
     inventory_attack e;
     animate_sprite a;
+    def_sprite s_bulle;
+    def_texture t_bulle;
     int what_face;
     int detect_fight1;
     int detect_fight2;

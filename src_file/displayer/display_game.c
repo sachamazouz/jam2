@@ -140,21 +140,24 @@ void draw_score(basic_struct_t *basic, display_struct_t *sprite_struct, enemy_po
 
 void display_how_to_play1(basic_struct_t *basic, display_struct_t *sprite_struct, enemy_pos_t *array)
 {
-
+    sfRenderWindow_drawText(basic->window, sprite_struct->text1.text, NULL);
 }
 
 void display_how_to_play2(basic_struct_t *basic, display_struct_t *sprite_struct, enemy_pos_t *array)
 {
-
+    sfRenderWindow_drawText(basic->window, sprite_struct->text2.text, NULL);
 }
 
 void display_how_to_play3(basic_struct_t *basic, display_struct_t *sprite_struct, enemy_pos_t *array)
 {
-
+    sfRenderWindow_drawText(basic->window, sprite_struct->text3.text, NULL);
 }
 
 void launch_intro(basic_struct_t *basic, display_struct_t *sprite_struct, enemy_pos_t *array)
 {
+    //afficher le texte pour cliquer sur A
+    sfRenderWindow_drawSprite(basic->window, sprite_struct->s_bulle.s, NULL);
+    sfRenderWindow_drawText(basic->window, sprite_struct->click_intro.text, NULL);
     sprite_struct->clock.time = sfClock_getElapsedTime(sprite_struct->clock.clock);
     sprite_struct->seconds = sprite_struct->clock.time.microseconds / 1000000.0;
     if (sfKeyboard_isKeyPressed(sfKeyA) && (sprite_struct->seconds > 0.10)) {
@@ -178,7 +181,7 @@ void launch_intro(basic_struct_t *basic, display_struct_t *sprite_struct, enemy_
             return;
         }
         if(sfKeyboard_isKeyPressed(sfKeyLeft) && (sprite_struct->seconds > 0.10)) {
-            array->introduction++;
+            array->introduction--;
             sfClock_restart(sprite_struct->clock.clock);
             return;
         }
@@ -191,7 +194,7 @@ void launch_intro(basic_struct_t *basic, display_struct_t *sprite_struct, enemy_
             return;
         }
         if(sfKeyboard_isKeyPressed(sfKeyLeft) && (sprite_struct->seconds > 0.10)) {
-            array->introduction++;
+            array->introduction--;
             sfClock_restart(sprite_struct->clock.clock);
             return;
         }

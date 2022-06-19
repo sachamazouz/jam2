@@ -67,6 +67,56 @@ void create_text_name(display_struct_t *sprite_struct)
     "tick avoider");
     sfText_setColor(sprite_struct->game_name.text, sfColor_fromRGB(100, 100, 255));
     sfText_setPosition(sprite_struct->game_name.text, (sfVector2f) {550, 10});
+
+    sprite_struct->click_intro.font = sfFont_createFromFile("Ressources/zorque.otf");
+    sprite_struct->click_intro.text = sfText_create();
+    sfText_setFont(sprite_struct->click_intro.text,
+    sprite_struct->click_intro.font);
+    sfText_setCharacterSize(sprite_struct->click_intro.text, 25);
+    sfText_setString(sprite_struct->click_intro.text, "Click on 'A' to skip introduction");
+    sfText_setColor(sprite_struct->click_intro.text, sfColor_fromRGB(100, 100, 255));
+    sfText_setPosition(sprite_struct->click_intro.text, (sfVector2f) {100, 800});
+
+    //Hi! I've been stuck in the middle of the desert for 4 days...
+    sprite_struct->text1.font = sfFont_createFromFile("Ressources/zorque.otf");
+    sprite_struct->text1.text = sfText_create();
+    sfText_setFont(sprite_struct->text1.text,
+    sprite_struct->text1.font);
+    sfText_setCharacterSize(sprite_struct->text1.text, 25);
+    sfText_setString(sprite_struct->text1.text, "Hi! I've been stuck in the middle\n of the desert since 4 days...");
+    sfText_setColor(sprite_struct->text1.text, sfColor_fromRGB(100, 100, 255));
+    sfText_setPosition(sprite_struct->text1.text, (sfVector2f) {1070, 200});
+
+    sprite_struct->text2.font = sfFont_createFromFile("Ressources/zorque.otf");
+    sprite_struct->text2.text = sfText_create();
+    sfText_setFont(sprite_struct->text2.text,
+    sprite_struct->text2.font);
+    sfText_setCharacterSize(sprite_struct->text2.text, 25);
+    sfText_setString(sprite_struct->text2.text, "  We arrived on a special mission, with\n 4 colleagues."
+    "two have been killed by\n      some ticks family The last\n two managed"
+    " to escape but \n      I can't find them anymore...");
+    sfText_setColor(sprite_struct->text2.text, sfColor_fromRGB(100, 100, 255));
+    sfText_setPosition(sprite_struct->text2.text, (sfVector2f) {1000, 180});
+
+    sprite_struct->text3.font = sfFont_createFromFile("Ressources/zorque.otf");
+    sprite_struct->text3.text = sfText_create();
+    sfText_setFont(sprite_struct->text3.text,
+    sprite_struct->text3.font);
+    sfText_setCharacterSize(sprite_struct->text3.text, 25);
+    sfText_setString(sprite_struct->text3.text, "They just told me to left the desert \nby a green door"
+    "please, help me to \nfind it or Ill probably dead in\n the worst conditions...");
+    sfText_setColor(sprite_struct->text3.text, sfColor_fromRGB(100, 100, 255));
+    sfText_setPosition(sprite_struct->text3.text, (sfVector2f) {1000, 180});
+
+
+
+    sprite_struct->s_bulle.posi = (sfVector2f) {980, 55};
+    sprite_struct->t_bulle.t = sfTexture_createFromFile("Ressources/bulle_intro.png", NULL);
+    sprite_struct->s_bulle.rect = (sfIntRect) {10, 0, 605, 700};
+    sprite_struct->s_bulle.s = sfSprite_create();
+    sfSprite_setTexture(sprite_struct->s_bulle.s, sprite_struct->t_bulle.t, sfTrue);
+    sfSprite_setTextureRect(sprite_struct->s_bulle.s, sprite_struct->s_bulle.rect);
+    sfSprite_setPosition(sprite_struct->s_bulle.s, sprite_struct->s_bulle.posi);
 }
 
 void create_sprite_struct_start_exit(display_struct_t *s)
